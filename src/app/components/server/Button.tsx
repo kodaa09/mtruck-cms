@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 type ButtonProps = {
   text: string;
   image?: string;
@@ -8,7 +10,7 @@ export default function Button({ text, image, alt }: ButtonProps) {
   return (
     <div className="button">
       {image && <img src={image} alt={alt} />}
-      <button className="button-action">{text}</button>
+      <Link href="/vehicules" className="button-action">{text}</Link>
     </div>
   );
 }

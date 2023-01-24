@@ -11,7 +11,7 @@ export default async function FaqContainer() {
       <div className="faq-container-wrapper">
       <div className="faq-container-header">
         <Title title="F.A.Q" />
-        <a href="" className="faq-btn">Poser une question</a>
+        <a href="#contact" className="faq-btn">Poser une question</a>
       </div>
         {
           faqs.map((faq: FaqTypeApi) => (

@@ -1,6 +1,5 @@
 import '../styles/main.scss';
 import Header from './components/client/Header';
-import Navbar from './components/server/Navbar';
 
 export default function RootLayout({
   children,
@@ -11,9 +10,7 @@ export default function RootLayout({
     <html lang="fr">
       <head />
       <body>
-        <Header>
-          <Navbar />
-        </Header>
+        <Header />
         {children}
       </body>
     </html>

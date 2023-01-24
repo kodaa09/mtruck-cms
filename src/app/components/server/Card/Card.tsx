@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 type CardType = {
   image: string;
   text: string;
@@ -12,7 +14,9 @@ export default function Card({ text, image, alt, cta }: CardType) {
       <div className="card-wrapper">
         <div className="card-content">
           <p className="card-txt">{text}</p>
-          <a className="card-link" href="">{cta}</a>
+          <Link className="card-link" href="/vehicules">
+            {cta}
+          </Link>
         </div>
         <div className="card-media">
           <img src={image} alt={alt} />
