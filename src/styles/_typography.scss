@@ -1,0 +1,53 @@
+@mixin title($level: 1) {
+  // font-family: $font-title;
+  @if ($level==1) {
+    font-size: rem(55);
+    @include tablet {
+      font-size: rem(65);
+    }
+    @include desktop {
+      font-size: rem(85);
+    }
+    @include desktop-xl {
+      font-size: rem(96);
+    }
+  }
+  @if ($level==2) {
+    font-size: rem(35);
+    margin-bottom: rem(30);
+    @include tablet {
+      font-size: rem(40);
+    }
+    @include desktop {
+      font-size: rem(50);
+    }
+    @include desktop-xl {
+      font-size: rem(64);
+    }
+  }
+  @if ($level==3) {
+    // font-family: $font-default;
+    font-size: rem(20);
+    @include tablet {
+      font-size: rem(24);
+    }
+    @include desktop {
+      font-size: rem(28);
+    }
+    @include desktop-xl {
+      font-size: rem(32);
+    }
+  }
+  @if ($level==3) {
+    // font-family: $font-title;
+    font-size: rem(18);
+    @include desktop-xl {
+      font-size: rem(20);
+    }
+  }
+}
+
+@mixin text() {
+  font-family: $font-default;
+  font-weight: 500;
+}

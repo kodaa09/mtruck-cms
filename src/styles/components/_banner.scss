@@ -1,0 +1,28 @@
+.banner {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  .banner-wrapper {
+    @include wrapper;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .banner-title {
+    @include title(1);
+    line-height: rem(86);
+    font-weight: 400;
+    margin-bottom: rem(20);
+    @include tablet {
+      width: 50%;
+    }
+    @include desktop {
+      width: 45%;
+    }
+    @include desktop-xl {
+      width: 50%;
+    }
+  }
+}

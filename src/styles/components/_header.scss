@@ -1,0 +1,40 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 0 rem(1) rgb(255 255 255 / 16%);
+  background-color: transparent;
+  z-index: 50;
+  padding-top: rem(5);
+  padding-bottom: rem(5);
+  .header-wrapper {
+    @include wrapper;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(30);
+  }
+  .header-burger-container {
+    width: 5%;
+    display: flex;
+    justify-content: center;
+  }
+  .header-burger {
+    @include resetBtn;
+    width: rem(40);
+    i {
+      background-color: $white;
+      height: rem(2);
+      width: 100%;
+      display: block;
+      border-radius: rem(30);
+      overflow: hidden;
+      transition: all 0.1s;
+      margin-bottom: rem(5);
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

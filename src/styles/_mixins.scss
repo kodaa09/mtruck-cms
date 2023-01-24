@@ -1,0 +1,183 @@
+@charset "UTF-8";
+
+$color-main: #000 !default;
+
+$wrapper-max: 1500px !default;
+$wrapper-width-sm: 95% !default;
+$wrapper-width-md: 90% !default;
+$wrapper-width-lg: 90% !default;
+
+$vertical-spacing-mobile: 50px !default;
+$vertical-spacing-tablet: 60px !default;
+$vertical-spacing-desktop: 80px !default;
+
+@mixin wrapper {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: $wrapper-width-sm;
+  max-width: $wrapper-max;
+  @include desktop {
+    width: $wrapper-width-md;
+  }
+  @include desktop-xl {
+    width: $wrapper-width-lg;
+  }
+}
+
+@mixin vertical-spacing-top($facteur: 1) {
+  margin-top: $vertical-spacing-mobile * $facteur;
+  @include tablet {
+    margin-top: $vertical-spacing-tablet * $facteur;
+  }
+  @include desktop {
+    margin-top: $vertical-spacing-desktop * $facteur;
+  }
+}
+
+@mixin vertical-spacing-bottom($facteur: 1) {
+  margin-bottom: $vertical-spacing-mobile * $facteur;
+  @include tablet {
+    margin-bottom: $vertical-spacing-tablet * $facteur;
+  }
+  @include desktop {
+    margin-bottom: $vertical-spacing-desktop * $facteur;
+  }
+}
+
+@mixin vertical-spacing($facteur: 1) {
+  @include vertical-spacing-top($facteur);
+  @include vertical-spacing-bottom($facteur);
+}
+
+@mixin vertical-spacing-inner-top($facteur: 1) {
+  padding-top: $vertical-spacing-mobile * $facteur;
+  @include tablet {
+    padding-top: $vertical-spacing-tablet * $facteur;
+  }
+  @include desktop {
+    padding-top: $vertical-spacing-desktop * $facteur;
+  }
+}
+
+@mixin vertical-spacing-inner-bottom($facteur: 1) {
+  padding-bottom: $vertical-spacing-mobile * $facteur;
+  @include tablet {
+    padding-bottom: $vertical-spacing-tablet * $facteur;
+  }
+  @include desktop {
+    padding-bottom: $vertical-spacing-desktop * $facteur;
+  }
+}
+
+@mixin vertical-spacing-inner($facteur: 1) {
+  @include vertical-spacing-inner-top($facteur);
+  @include vertical-spacing-inner-bottom($facteur);
+}
+
+@mixin resetList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin resetBtn {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 0;
+  white-space: normal;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  -webkit-appearance: none;
+
+  &:not(input) {
+    user-select: none;
+  }
+  &:hover {
+    text-decoration: none;
+  }
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+}
+
+@mixin hideAccess {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  word-wrap: normal;
+  &.focusable:focus {
+    position: static !important;
+    clip: auto;
+    overflow: visible;
+    height: auto;
+    width: auto;
+  }
+}
+
+.hide-access {
+  @include hideAccess;
+}
+
+@mixin effectHover {
+  &::after {
+    content: "";
+    display: block;
+    width: 60%;
+    height: rem(2);
+    background: $sable;
+    transition: width 1s;
+  }
+}
+
+@mixin cta($color: $black, $background: $white) {
+  @include resetBtn;
+  position: relative;
+  display: inline-block;
+  background-color: $background;
+  color: $color;
+  padding: rem(15) rem(35);
+  transition: background-color $transition-out-hover;
+  clip-path: polygon(50% 0%, 92% 0, 100% 25%, 100% 100%, 8% 100%, 0 75%, 0 0);
+  border: rem(1) solid transparent;
+  &:not([disabled]) {
+    &:hover,
+    &:focus {
+      color: $background;
+      background-color: transparent;
+      border: rem(1) solid $background;
+      transition: background-color $transition-in-hover;
+    }
+  }
+  @content;
+}
+
+@mixin cutBackground() {
+  @include vertical-spacing-inner;
+  background-color: $black;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    clip-path: polygon(65% 0, 100% 0, 100% 100%, 0% 100%);
+    background-color: $black-light;
+    margin-top: rem(-30);
+  }
+}

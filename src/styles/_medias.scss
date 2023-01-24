@@ -1,0 +1,34 @@
+// VARIABLES
+$breakpoint-phablet: 480px !default;
+$breakpoint-tablet: 768px  !default;
+$breakpoint-desktop: 1024px  !default;
+$breakpoint-desktop-xl: 1440px !default;
+$breakpoint-burger: 1100px !default;
+
+// ------------------------------------------------------------
+// MEDIAS
+// ------------------------------------------------------------
+
+$media-query: 'only screen and';
+
+// Queries string
+$mobile:          '#{$media-query} (max-width: #{$breakpoint-tablet - 1})';
+$phablet:         '#{$media-query} (min-width: #{$breakpoint-phablet})';
+$tablet:          '#{$media-query} (min-width: #{$breakpoint-tablet})';
+$tablet-max :     '#{$media-query} (max-width: #{$breakpoint-desktop - 1})';
+$tablet-only:     '#{$media-query} (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop - 1})';
+$desktop:         '#{$media-query} (min-width: #{$breakpoint-desktop})';
+$desktop-xl:      '#{$media-query} (min-width: #{$breakpoint-desktop-xl})';
+$burger-enable:   '#{$media-query} (max-width: #{$breakpoint-burger - 1})';
+$burger-disable:  '#{$media-query} (min-width: #{$breakpoint-burger})';
+
+// Mixins media queries
+@mixin mobile         { @media #{$mobile}         { @content; } }
+@mixin phablet        { @media #{$phablet}        { @content; } }
+@mixin tablet         { @media #{$tablet}         { @content; } }
+@mixin tablet-max     { @media #{$tablet-max}     { @content; } }
+@mixin tablet-only    { @media #{$tablet-only}    { @content; } }
+@mixin desktop        { @media #{$desktop}        { @content; } }
+@mixin desktop-xl     { @media #{$desktop-xl}     { @content; } }
+@mixin burger-enable  { @media #{$burger-enable}  { @content; } }
+@mixin burger-disable { @media #{$burger-disable} { @content; } }

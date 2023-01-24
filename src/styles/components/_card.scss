@@ -1,0 +1,47 @@
+.card {
+  overflow: hidden;
+  @include mobile {
+    margin-top: rem(-8);
+  }
+  .card-wrapper {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background-color: rgba($black, $alpha: 0.2);
+    }
+    &:hover .card-media {
+      transform: scale(1.1);
+    }
+  }
+  .card-content {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    text-align: center;
+    bottom: 15%;
+  }
+  .card-txt {
+    @include title(2);
+    margin-bottom: rem(20);
+  }
+  .card-link {
+    @include cta;
+    @include mobile {
+      padding: rem(10) rem(20);
+    }
+  }
+  .card-media {
+    transition: 3s;
+    img {
+      object-fit: cover;
+      object-position: center;
+      width: 100%;
+    }
+  }
+}

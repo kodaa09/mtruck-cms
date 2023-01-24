@@ -1,0 +1,19 @@
+.title-element {
+  @include title(2);
+  font-weight: 700;
+  text-transform: capitalize;
+  position: relative;
+  padding-left: rem(60);
+  z-index: 1;
+  &::before {
+    position: absolute;
+    content: "";
+    top: rem(5);
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 rem(38) rem(38) 0;
+    border-color: transparent $sable transparent transparent;
+  }
+}

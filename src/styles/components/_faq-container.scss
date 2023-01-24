@@ -1,0 +1,21 @@
+.faq-container {
+  @include cutBackground;
+  .faq-container-wrapper {
+    @include wrapper;
+    z-index: 1;
+  }
+  .faq-container-header {
+    border-bottom: rem(1) solid rgba($white, 0.5);
+    padding: rem(20);
+    margin-bottom: rem(40);
+    @include tablet {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @include tablet {
+        margin-left: rem(40);
+        margin-right: rem(40);
+      }
+    }
+  }
+}

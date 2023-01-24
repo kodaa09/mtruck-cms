@@ -1,0 +1,8 @@
+.card-container {
+  .card-container-wrapper {
+    display: grid;
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

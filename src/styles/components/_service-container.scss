@@ -1,0 +1,16 @@
+.service-container {
+  @include cutBackground;
+  .service-container-wrapper {
+    @include wrapper;
+  }
+  .service-container-container {
+    display: grid;
+    grid-gap: rem(30);
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include desktop {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

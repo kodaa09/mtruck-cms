@@ -1,0 +1,23 @@
+.service {
+  background-color: $white;
+  color: $black;
+  padding: rem(20);
+  z-index: 10;
+  clip-path: polygon(50% 0%, 92% 0, 100% 25%, 100% 100%, 8% 100%, 0 75%, 0 0);
+  display: flex;
+  align-items: center;
+  gap: rem(20);
+  .service-wrapper {
+    display: flex;
+    align-items: center;
+    gap: rem(30);
+  }
+  .service-media {
+    width: rem(50);
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: auto;
+    }
+  }
+}

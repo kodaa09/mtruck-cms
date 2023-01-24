@@ -1,0 +1,100 @@
+// -------------------------
+// Colors
+// -------------------------
+$white: #fff;
+$black: #000;
+$grey-dark: #333333;
+$grey: #707070;
+$grey-light: #dedede;
+$grey-ulight: #f5f5f5;
+$red: #c82a28;
+$orange: #f5a623;
+$green: #1da763;
+$blue: #36a2eb;
+$blue-dark: #085ec2;
+$yellow: #ffeab2;
+
+$black-light: #222222;
+$brown: #706056;
+$brown-light: #887467;
+$brown-ulight: #a58b79;
+$sable: #c5a690;
+
+// socials
+$social-fb: #3b5998;
+$social-tw: #3b9ef2;
+$social-goo: #dd4b39;
+$social-dp: #007ee5;
+$social-in: #d73576;
+// variables
+$color-main: $blue;
+$color-second: $blue-dark;
+
+$color-error: $red;
+$color-success: $green;
+
+// -------------------------
+// Breakpoints
+// -------------------------
+$breakpoint-phablet: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+$breakpoint-desktop-xl: 1280px;
+$breakpoint-burger: 1200px;
+
+$wrapper-max: 1440px;
+$wrapper-width-sm: 95%;
+$wrapper-width-md: 95%;
+$wrapper-width-lg: 90%;
+
+$vertical-spacing-mobile: 40px;
+$vertical-spacing-tablet: 50px;
+$vertical-spacing-desktop: 70px;
+
+$header-top-height: 35px;
+$header-main-height-desktop: 90px;
+$header-main-height-mobile: 60px;
+
+$header-height-mobile: 100px;
+$header-height-desktop: $header-top-height + $header-main-height-desktop;
+$header-height-scroll: 60px;
+
+// -------------------------
+// Easing
+// -------------------------
+$ease-in-quad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+$ease-in-cubic: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+$ease-in-quart: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+$ease-in-quint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+$ease-in-sine: cubic-bezier(0.47, 0, 0.745, 0.715);
+$ease-in-expo: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+$ease-in-circ: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+$ease-in-back: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+
+$ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+$ease-out-cubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+$ease-out-quart: cubic-bezier(0.165, 0.84, 0.44, 1);
+$ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
+$ease-out-sine: cubic-bezier(0.39, 0.575, 0.565, 1);
+$ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+$ease-out-circ: cubic-bezier(0.075, 0.82, 0.165, 1);
+$ease-out-back: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+$ease-in-out-quad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+$ease-in-out-cubic: cubic-bezier(0.645, 0.045, 0.355, 1);
+$ease-in-out-quart: cubic-bezier(0.77, 0, 0.175, 1);
+$ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1);
+$ease-in-out-sine: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+$ease-in-out-expo: cubic-bezier(1, 0, 0, 1);
+$ease-in-out-circ: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+$ease-in-out-back: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+/* -----
+Transition
+----- */
+$transition-in-duration: 0.2s;
+$transition-in-ease: $ease-in-sine;
+$transition-out-duration: 0.5s;
+$transition-out-ease: $ease-out-sine;
+$transition-in-hover: 0.15s $ease-in-quad;
+$transition-out-hover: 0.25s $ease-out-quad;

@@ -1,0 +1,22 @@
+.navbar {
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .navbar-left {
+    @include resetList;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  .navbar-center {
+
+  }
+  .navbar-right {
+    @include resetList;
+  }
+  .navbar-item-link {
+    color: $white;
+    text-decoration: none;
+  }
+}
