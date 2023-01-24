@@ -1,0 +1,27 @@
+.notice {
+  .notice-wrapper {
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    padding-left: rem(60);
+  }
+  .notice-ico {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: rem(30);
+  }
+  .notice-content {
+    margin-bottom: rem(30);
+  }
+  .notice-auhtor {
+    color: $sable;
+  }
+  .swiper {
+    @include tablet {
+      width: 60%;
+    }
+    padding-bottom: rem(50);
+  }
+}

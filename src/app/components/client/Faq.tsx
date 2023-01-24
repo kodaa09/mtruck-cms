@@ -1,6 +1,6 @@
 "use client";
-
 import { FaqType } from "@/types/FaqType";
+import { RiArrowDownSFill, RiArrowUpSFill } from 'react-icons/ri';
 
 export default function Faq({ id, question, response }: FaqType) {
   return (
@@ -8,15 +8,14 @@ export default function Faq({ id, question, response }: FaqType) {
       <div className="faq-wrapper">
         <div id="accordionGroup" className="faq-accordion">
           <div className="faq-content">
-            <h3 className="faq-title" data-faq-title>
-              <button type="button" aria-expanded="true" className="accordion-trigger" aria-controls={"faq-" + id} id={"accordionFaq-" + "1"}>
-                <span className="accordion-title">{question}</span>
-                <svg width="40" height="40" viewBox="0 0 24 24">
-                  <path fill="currentColor" d="m7 10l5 5l5-5z"></path>
-                </svg>
+            <h3 className="faq-title">
+              <button type="button" aria-expanded="false" className="faq-accordion-trigger" aria-controls={"faq-" + id} id={"accordionFaq-" + id}>
+                <span className="faq-accordion-title">{question}</span>
+                <RiArrowUpSFill size={25}/>
+                {/* <RiArrowDownSFill size={25} /> */}
               </button>
             </h3>
-            <div id={"faq-" + "1"} className="accordion-panel" role="region" aria-labelledby={"accordionFaq-" + "1"}>
+            <div id={"faq-" + id} className="faq-accordion-panel" role="region" aria-labelledby={"accordionFaq-" + id}>
               <div>{response}</div>
             </div>
           </div>

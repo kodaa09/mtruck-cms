@@ -12,7 +12,7 @@ class FaqService {
 
   async getAllFaqs() {
     const apiUrl = process.env.NEXT_PUBLIC_API_URL;
-    const res = await fetch(`${apiUrl}/api/faqs?populate=*`);
+    const res = await fetch(`${apiUrl}/api/faqs`);
     if (!res.ok) throw new Error("Failed to fetch faqs data");
     const json = await res.json();
     return json.data;

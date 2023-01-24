@@ -1,8 +1,11 @@
 .faq-container {
-  @include cutBackground;
+  @include vertical-spacing-inner;
   .faq-container-wrapper {
     @include wrapper;
     z-index: 1;
+    background-color: #1d1d1d;
+    clip-path: polygon(0 0, 97% 0, 100% 14%, 100% 100%, 0 100%, 0% 50%);
+    padding: rem(30) rem(40);
   }
   .faq-container-header {
     border-bottom: rem(1) solid rgba($white, 0.5);
@@ -17,5 +20,8 @@
         margin-right: rem(40);
       }
     }
+  }
+  .faq-btn {
+    @include cta;
   }
 }

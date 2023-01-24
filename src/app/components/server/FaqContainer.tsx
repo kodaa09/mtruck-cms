@@ -15,7 +15,7 @@ export default async function FaqContainer() {
       </div>
         {
           faqs.map((faq: FaqTypeApi) => (
-            <Faq question={faq.attributes.question} response={faq.attributes.response} id={faq.id} />
+            <Faq question={faq.attributes.question} response={faq.attributes.response} id={faq.id} key={faq.id} />
           ))
         }
       </div>

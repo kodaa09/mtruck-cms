@@ -1,0 +1,7 @@
+.notice-container {
+  @include cutBackground;
+  .notice-container-wrapper {
+    @include wrapper;
+    z-index: 1;
+  }
+}

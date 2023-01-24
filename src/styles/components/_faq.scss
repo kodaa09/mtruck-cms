@@ -28,4 +28,11 @@
       width: 100%;
     }
   }
+  .faq-item-btn {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    align-items: center;
+    font-weight: bold;
+  }
 }
