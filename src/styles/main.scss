@@ -24,3 +24,12 @@
 @import "./components/title";
 
 
+html {
+  font-family: var(--poppins);
+  h1, h2, h3, h4{
+    font-family: var(--tajawal);
+  }
+  .swiper-pagination-bullet-active {
+    background-color: $sable;
+  }
+}
