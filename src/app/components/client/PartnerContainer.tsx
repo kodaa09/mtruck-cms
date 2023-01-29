@@ -9,7 +9,7 @@ import PartnerService from "@/services/PartnerService";
 export default function PartnerContainer() {
   const images = PartnerService.getAllImages();
   return (
-    <div className="partner-container">
+    <div className="partner-container" id="partner">
       <div className="partner-container-wrapper">
         <Swiper
           modules={[Navigation, Autoplay]}

@@ -1,0 +1,127 @@
+.footer {
+  @include vertical-spacing-inner-top;
+  color: $black;
+  .footer-wrapper {
+    @include wrapper;
+  }
+  .footer-container {
+    margin-bottom: rem(30);
+    @include tablet {
+      display: flex;
+      margin-bottom: rem(60);
+    }
+  }
+  .footer-nav-contact {
+    display: flex;
+    @include tablet {
+      width: 50%;
+    }
+  }
+  .footer-media {
+    margin-bottom: rem(40);
+    text-align: center;
+    @include tablet {
+      width: 50%;
+      display: flex;
+      margin-bottom: 0;
+    }
+    img {
+      object-fit: contain;
+      width: rem(125);
+      height: auto;
+    }
+  }
+  .footer-nav {
+    width: 50%;
+    @include mobile {
+      width: 45%;
+    }
+  }
+  .footer-title {
+    @include title(3);
+    margin-bottom: rem(20);
+    color: $sable;
+  }
+  .footer-elements {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  .footer-element {
+    margin-bottom: rem(20);
+  }
+  .footer-element-link {
+    color: $black;
+    display: inline-block;
+    text-decoration: none;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 0;
+      height: rem(2);
+      background: $sable;
+      transition: width 1s;
+    }
+    &:hover::after {
+      width: 40%;
+    }
+    &:hover,
+    &:focus {
+      color: $black;
+    }
+  }
+  .footer-contact {
+    width: 50%;
+    @include mobile {
+      width: 55%;
+    }
+  }
+  .footer-contact-title {
+    @include title(3);
+    margin-bottom: rem(20);
+    color: $sable;
+  }
+  .footer-contact-link {
+    color: $black;
+    display: flex;
+    align-items: center;
+    gap: rem(25);
+    text-decoration: none;
+    margin-bottom: rem(20);
+    &:hover,
+    &:focus {
+      color: $black;
+    }
+  }
+  .footer-copyright {
+    @include tablet {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    padding: rem(20) rem(0);
+  }
+  .footer-copyright-text {
+    margin-bottom: rem(20);
+  }
+  .footer-copyright-rsx {
+    display: flex;
+    align-items: center;
+    gap: rem(40);
+  }
+  .footer-rsx {
+    color: $black;
+    border-radius: rem(20);
+    display: flex;
+    align-items: center;
+    gap: rem(10);
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      color: $sable;
+    }
+    svg {
+      width: rem(20);
+    }
+  }
+}

@@ -7,7 +7,7 @@ export default async function ServiceContainer() {
   const services = await ServiceService.getAllServices();
 
   return (
-    <div className="service-container">
+    <div className="service-container" id="service">
       <div className="service-container-wrapper">
       <Title title="Nos services" />
         <div className="service-container-container">
