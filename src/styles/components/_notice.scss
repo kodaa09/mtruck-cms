@@ -5,6 +5,11 @@
     margin-left: auto;
     position: relative;
     padding-left: rem(60);
+    padding-bottom: rem(50);
+    @include mobile {
+      width: 95%;
+      padding-left: rem(50);
+    }
   }
   .notice-ico {
     position: absolute;

@@ -3,8 +3,8 @@ import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import NoticeService from "@/services/NoticeService";
-import Notice from "../client/Notice";
-import Title from "../client/Title";
+import Notice from "../server/Notice";
+import Title from "./Title";
 import { NoticeTypeApi } from "@/types/NoticeType";
 import { use } from "react";
 

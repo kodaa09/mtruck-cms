@@ -1,0 +1,93 @@
+.contact {
+  @include vertical-spacing-inner;
+  background-color: $black;
+
+  .contact-wrapper {
+    @include wrapper;
+    @include tablet {
+      display: flex;
+      gap: rem(30);
+    }
+  }
+  .contact-content {
+    @include mobile {
+      margin-bottom: rem(40);
+    }
+    @include tablet {
+      width: 50%;
+    }
+  }
+  .contact-infos {
+    display: flex;
+    flex-direction: column;
+    padding-left: rem(50);
+    @include tablet {
+      padding-left: rem(60);
+    }
+    @include desktop {
+      padding-left: rem(70);
+    }
+  }
+  .contact-text {
+    margin-bottom: rem(30);
+    @include tablet {
+      margin-bottom: rem(60);
+    }
+  }
+  .contact-email {
+    margin-bottom: rem(30);
+  }
+  .contact-email,
+  .contact-phone {
+    color: $white;
+    display: flex;
+    align-items: center;
+    gap: rem(25);
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      color: $white;
+    }
+  }
+  .contact-form {
+    border-top: rem(1) solid rgba($white, 0.5);
+    padding-top: rem(40);
+    @include tablet {
+      width: 50%;
+      border-left: rem(1) solid rgba($white, 0.5);
+      border-top: initial;
+      padding-left: rem(33);
+      padding-top: 0;
+    }
+  }
+  .contact-form-group {
+    margin-bottom: rem(20);
+    position: relative;
+    input {
+      @include form-input;
+      background-color: $black-light;
+      border: rem(1) solid $black-light;
+      color: $white;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 rem(50) rem(50) 0;
+      border-color: transparent $black transparent transparent;
+    }
+    textarea {
+      @include form-textarea;
+      background-color: $black-light;
+      border: rem(1) solid $black-light;
+      color: $white;
+    }
+  }
+  .contact-form-btn {
+    @include cta;
+  }
+}

@@ -1,0 +1,32 @@
+.partner-container {
+  @include cutBackground;
+  .partner-container-wrapper {
+    @include wrapper;
+    z-index: 1;
+  }
+  .partner-container-swiperslide {
+    display: flex;
+    justify-content: center;
+  }
+  .partner-container-media {
+    text-align: center;
+    img {
+      object-fit: cover;
+      width: auto;
+      height: auto;
+      @include tablet {
+        width: rem(125);
+      }
+      @include desktop {
+        width: rem(100);
+      }
+    }
+  }
+  .swiper-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  .swiper-pagination {
+    bottom: 0;
+  }
+}

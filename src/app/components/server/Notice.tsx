@@ -1,4 +1,3 @@
-"use client";
 import { NoticeType } from "@/types/NoticeType";
 import { ImQuotesLeft } from "react-icons/im";
 
