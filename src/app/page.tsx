@@ -1,7 +1,7 @@
 import Title from "./components/client/Title";
 import Banner from "./components/server/Banner";
 import CardContainer from "./components/server/Card/CardContainer";
-import FaqContainer from "./components/server/FaqContainer";
+import FaqContainer from "./components/client/FaqContainer";
 import NoticeContainer from "./components/client/NoticeContainer";
 import ServiceContainer from "./components/server/Service/ServiceContainer";
 import PartnerContainer from "./components/client/PartnerContainer";
@@ -17,7 +17,6 @@ export default function Home() {
       {/* @ts-expect-error Server Component */}
       <CardContainer />
       <NoticeContainer />
-      {/* @ts-expect-error Server Component */}
       <FaqContainer />
       <PartnerContainer />
       <ContactForm />

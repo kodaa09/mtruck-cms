@@ -8,7 +8,7 @@ export default function ContactForm() {
           <Title title="Contactez nous" />
           <div className="contact-infos">
             <p className="contact-text">Lorem ipsum is placeholder text commonly used</p>
-            <a href="" className="contact-email">
+            <a href="mailto:contact@mtruck.fr" className="contact-email">
               <svg width="32" height="32" viewBox="0 0 24 24">
                 <path
                   fill="currentColor"
@@ -16,7 +16,7 @@ export default function ContactForm() {
               </svg>
               contact@mtruck.fr
             </a>
-            <a href="" className="contact-phone">
+            <a href="tel:+33 7 56 96 32 03" className="contact-phone">
               <svg width="32" height="32" viewBox="0 0 24 24">
                 <path
                   fill="currentColor"
