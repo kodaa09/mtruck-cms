@@ -15,5 +15,8 @@
     border-style: solid;
     border-width: 0 rem(38) rem(38) 0;
     border-color: transparent $sable transparent transparent;
+    @include desktop {
+      top: rem(15);
+    }
   }
 }
