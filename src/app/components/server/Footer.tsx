@@ -14,7 +14,7 @@ export default function Footer() {
               <h3 className="footer-title">Explorer</h3>
               <ul className="footer-elements">
                 <li className="footer-element">
-                  <Link className="footer-element-link" href="/vehicules">
+                  <Link className="footer-element-link" href="/vehicules" prefetch={false}>
                     Véhicules
                   </Link>
                 </li>
