@@ -1,7 +1,6 @@
 import { ServiceType } from "@/types/ServiceType";
 
 export default function Service({ image, text }: ServiceType) {
-  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
   return (
     <div className="service">
       <div className="service-wrapper">

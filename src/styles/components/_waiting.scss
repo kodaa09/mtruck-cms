@@ -1,12 +1,28 @@
 .waiting {
   display: none;
-  .waiting-img {
-    opacity: 0;
-    transition: opacity 3s;
+  .waiting-media {
+    animation: fadeIn 2s;
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
   }
   .waiting-text {
     color: $white;
     font-family: "--apocalypse-grunge";
+    animation: fadeIn 4s;
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
     @include mobile {
       font-size: rem(30);
     }

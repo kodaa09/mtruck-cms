@@ -4,7 +4,7 @@ import "@/styles/main.scss";
 import Header from "./components/client/Header";
 import Footer from "./components/server/Footer";
 import BurgerMenu from "./components/client/BurgerMenu";
-import WaitingScreen from "./components/client/WaitingScreen";
+import WaitingScreen from "./components/server/WaitingScreen";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
