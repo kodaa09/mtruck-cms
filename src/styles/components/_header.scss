@@ -19,6 +19,10 @@
     width: 5%;
     display: flex;
     justify-content: center;
+    padding-top: rem(5);
+    @include mobile {
+      width: 10%;
+    }
   }
   .header-burger {
     @include resetBtn;
@@ -35,6 +39,11 @@
       &:last-child {
         margin-bottom: 0;
       }
+    }
+  }
+  .hide-on-mobile {
+    @include mobile {
+      display: none;
     }
   }
 }

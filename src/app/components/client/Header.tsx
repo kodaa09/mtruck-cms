@@ -1,12 +1,11 @@
 "use client";
-import Link from 'next/link'
+import Link from "next/link";
 import Image from "next/image";
 import logo from "../../../../public/logo-mtruck.svg";
 
-export default function Header() {
-  function onOpenBurger() {
-    console.log("jopen");
-    return <div>burger apparait</div>;
+export default function Header({ isOpen, setIsOpen, logoSize }: any) {
+  function onToggleBurger() {
+    setIsOpen(!isOpen);
   }
 
   return (
@@ -15,7 +14,7 @@ export default function Header() {
         <nav className="navbar">
           <ul className="navbar-left">
             <li className="navbar-item hide-on-mobile">
-              <Link className="navbar-item-link" href="/vehicules">
+              <Link className="navbar-item-link" href="/vehicules" prefetch={false}>
                 Vehicules
               </Link>
             </li>
@@ -27,7 +26,7 @@ export default function Header() {
           </ul>
           <div className="navbar-center">
             <Link href="/">
-              <Image src={logo} alt="Mtruck logo" width={130} />
+              <Image src={logo} alt="Mtruck logo" width={logoSize} />
             </Link>
           </div>
           <ul className="navbar-right">
@@ -39,7 +38,7 @@ export default function Header() {
           </ul>
         </nav>
         <div className="header-burger-container">
-          <button className="header-burger" onClick={onOpenBurger}>
+          <button className="header-burger" onClick={onToggleBurger}>
             <i></i>
             <i></i>
             <span className="hide-access">Ouvrir le menu</span>

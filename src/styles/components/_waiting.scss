@@ -1,0 +1,23 @@
+.waiting {
+  display: none;
+  .waiting-img {
+    opacity: 0;
+    transition: opacity 3s;
+  }
+  .waiting-text {
+    color: $white;
+    font-family: "--apocalypse-grunge";
+    @include mobile {
+      font-size: rem(30);
+    }
+    @include tablet {
+      font-size: rem(40);
+    }
+    @include tablet {
+      font-size: rem(50);
+    }
+    @include desktop-xl {
+      font-size: rem(70);
+    }
+  }
+}

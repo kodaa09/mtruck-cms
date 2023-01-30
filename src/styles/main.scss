@@ -12,6 +12,7 @@
 // Components
 @import "./components/banner";
 @import "./components/button";
+@import "./components/burger-menu";
 @import "./components/card-container";
 @import "./components/card";
 @import "./components/contact";
@@ -25,17 +26,73 @@
 @import "./components/service-container";
 @import "./components/service";
 @import "./components/title";
-
+@import "./components/waiting";
 
 html {
   font-family: var(--poppins);
-  h1, h2, h3, h4{
+  h1,
+  h2,
+  h3,
+  h4 {
     font-family: var(--tajawal);
   }
   .swiper-pagination-bullet-active {
     background-color: $sable;
   }
-  .swiper-button-prev, .swiper-button-next::after{
+  .swiper-button-prev,
+  .swiper-button-next::after {
     color: $sable;
+  }
+  body {
+    &.is-burger-open {
+      overflow: hidden;
+      .burger-menu {
+        color: $white;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: initial;
+        background-color: $black;
+        z-index: 100;
+      }
+      i {
+        &:first-child {
+          transform: rotate(-45deg);
+        }
+        &:last-child {
+          transform: rotate(45deg);
+        }
+      }
+    }
+    &.is-loading {
+      overflow: hidden;
+      .waiting {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $black;
+        z-index: 100;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        img {
+          object-fit: contain;
+          width: rem(150);
+          height: auto;
+        }
+        .waiting-img {
+          opacity: 1;
+          transition: opacity 3s;
+        }
+      }
+    }
+    &.is-scrolling {
+      .header {
+        background-color: $black;
+        box-shadow: inherit;
+      }
+    }
   }
 }

@@ -1,4 +1,3 @@
-import Title from "./components/client/Title";
 import Banner from "./components/server/Banner";
 import CardContainer from "./components/server/Card/CardContainer";
 import FaqContainer from "./components/client/FaqContainer";
