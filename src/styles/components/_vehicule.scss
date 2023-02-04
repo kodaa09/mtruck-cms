@@ -1,5 +1,5 @@
 .vehicule {
-  height: 100vh;
+  height: 100%;
   scroll-snap-align: start;
   scroll-snap-stop: always;
   background-image: url("/sprinter.jpeg");
@@ -22,7 +22,7 @@
     justify-content: center;
     gap: rem(30);
     color: $white;
-    padding-bottom: rem(70);
+    padding-bottom: rem(80);
   }
   .vehicule-content {
     z-index: 1;
