@@ -16,13 +16,13 @@
     background-color: rgba($black, $alpha: 0.2);
   }
   .vehicule-content-container {
-    @include vertical-spacing-inner-bottom;
     height: 100%;
     display: flex;
     align-items: flex-end;
     justify-content: center;
     gap: rem(30);
     color: $white;
+    padding-bottom: rem(70);
   }
   .vehicule-content {
     z-index: 1;
