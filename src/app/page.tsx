@@ -16,9 +16,9 @@ export default function Home() {
       {/* @ts-expect-error Server Component */}
       <CardContainer />
       <NoticeContainer />
-      <FaqContainer />
-      <PartnerContainer />
+      {/* <FaqContainer /> */}
       <ContactForm />
+      <PartnerContainer />
     </main>
   );
 }

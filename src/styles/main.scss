@@ -8,6 +8,7 @@
 
 // Pages
 @import "./pages/home";
+@import "./pages/vehicules";
 
 // Components
 @import "./components/banner";
@@ -25,7 +26,9 @@
 @import "./components/partner-container";
 @import "./components/service-container";
 @import "./components/service";
+@import "./components/shutter";
 @import "./components/title";
+@import "./components/vehicule";
 @import "./components/waiting";
 
 html {

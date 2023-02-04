@@ -14,7 +14,7 @@ export default function Card({ text, image, alt, cta }: CardType) {
       <div className="card-wrapper">
         <div className="card-content">
           <p className="card-txt">{text}</p>
-          <Link className="card-link" href="/vehicules" prefetch={false}>
+          <Link className="card-link" href="/vehicules">
             {cta}
           </Link>
         </div>

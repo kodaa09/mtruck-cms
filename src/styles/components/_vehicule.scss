@@ -1,0 +1,64 @@
+.vehicule {
+  height: 100vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  background-image: url("/sprinter.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba($black, $alpha: 0.2);
+  }
+  .vehicule-content-container {
+    @include vertical-spacing-inner-bottom;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: rem(30);
+    color: $white;
+  }
+  .vehicule-content {
+    z-index: 1;
+    @include tablet {
+      display: flex;
+      align-items: center;
+      gap: rem(40);
+    }
+  }
+  .vehicule-content-txt {
+    display: flex;
+    align-items: center;
+    gap: rem(30);
+    @include mobile {
+      margin-bottom: rem(20);
+    }
+  }
+  .vehicule-infos {
+    text-align: center;
+    font-family: "--pt-mono";
+  }
+  .vehicule-infos-txt {
+    font-size: rem(28);
+    font-family: "--pt-mono";
+  }
+  .vehicule-btn {
+    @include cta;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  &.is-shutter-open {
+    overflow: hidden;
+    .shutter {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

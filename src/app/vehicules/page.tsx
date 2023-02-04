@@ -1,7 +1,12 @@
+import FaqContainer from "../components/client/FaqContainer";
+import Vehicule from "../components/client/Vehicule";
+
 export default function Vehicules() {
   return (
-    <div>
-      <h1>Véhicules pages</h1>
+    <div className="vehicules">
+      <Vehicule />
+      <Vehicule />
+      <FaqContainer />
     </div>
   );
 }

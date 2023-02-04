@@ -1,0 +1,43 @@
+.shutter {
+  opacity: 0;
+  visibility: hidden;
+  background-color: $white;
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  bottom: 1%;
+  z-index: 100;
+  width: 40%;
+  clip-path: polygon(0 0, 93% 0, 100% 17%, 100% 100%, 0 100%, 0% 50%);
+  .shutter-wrapper {
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    width: 90%;
+    padding-top: rem(40);
+    padding-bottom: rem(40);
+  }
+  .shutter-title {
+    @include title(4);
+    margin-bottom: rem(20);
+    font-weight: 900;
+    justify-content: space-between;
+    &:first-child {
+      margin-top: 0;
+    }
+    button {
+      @include resetBtn;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+  .shutter-item-btn {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    align-items: center;
+    font-weight: bold;
+  }
+}

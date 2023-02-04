@@ -1,5 +1,9 @@
 .faq-container {
   @include vertical-spacing-inner;
+  height: 100vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  color: $white;
   .faq-container-wrapper {
     @include wrapper;
     z-index: 1;

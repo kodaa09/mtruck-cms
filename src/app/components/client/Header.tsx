@@ -14,7 +14,7 @@ export default function Header({ isOpen, setIsOpen, logoSize }: any) {
         <nav className="navbar">
           <ul className="navbar-left">
             <li className="navbar-item hide-on-mobile">
-              <Link className="navbar-item-link" href="/vehicules" prefetch={false}>
+              <Link className="navbar-item-link" href="/vehicules">
                 Vehicules
               </Link>
             </li>

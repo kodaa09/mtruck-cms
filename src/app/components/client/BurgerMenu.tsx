@@ -24,7 +24,7 @@ export default function BurgerMenu({ setIsOpen }: any) {
       <div className="burger-menu-content">
         <ul className="burger-menu-content-list">
           <li className="burger-menu-content-item">
-            <Link className="burger-menu-content-item-link" href="/vehicules" prefetch={false}>
+            <Link className="burger-menu-content-item-link" href="/vehicules">
               Vehicules
             </Link>
           </li>
