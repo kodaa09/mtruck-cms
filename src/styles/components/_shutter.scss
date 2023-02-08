@@ -1,21 +1,37 @@
 .shutter {
-  opacity: 0;
-  visibility: hidden;
   background-color: $white;
   position: absolute;
-  top: 1%;
-  right: 1%;
-  bottom: 1%;
+  top: 0;
+  left: 0;
+  bottom: 0;
   z-index: 100;
-  width: 40%;
+  width: 100%;
   clip-path: polygon(0 0, 93% 0, 100% 17%, 100% 100%, 0 100%, 0% 50%);
+  @include tablet {
+    width: 70%;
+  }
+  @include desktop {
+    width: 60%;
+  }
   .shutter-wrapper {
     position: relative;
     margin-right: auto;
     margin-left: auto;
-    width: 90%;
-    padding-top: rem(40);
-    padding-bottom: rem(40);
+    width: 80%;
+    margin-top: rem(15);
+    margin-bottom: rem(20);
+  }
+  .shutter-close {
+    @include resetBtn;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .shutter-content {
+    @include vertical-spacing-bottom;
+  }
+  .shuter-accordion {
+    @include vertical-spacing-inner-top;
   }
   .shutter-title {
     @include title(4);

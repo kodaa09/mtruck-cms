@@ -1,11 +1,12 @@
 .vehicule {
-  height: 100%;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-  background-image: url("/sprinter.jpeg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
+  height: 100vh;
+  position: relative;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
   &::after {
     content: "";
     position: absolute;
@@ -53,12 +54,5 @@
     display: flex;
     margin-right: auto;
     margin-left: auto;
-  }
-  &.is-shutter-open {
-    overflow: hidden;
-    .shutter {
-      opacity: 1;
-      visibility: visible;
-    }
   }
 }

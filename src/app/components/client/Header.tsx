@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "../../../../public/logo-mtruck.svg";
 
 export default function Header({ isOpen, setIsOpen, logoSize }: any) {
   function onToggleBurger() {
@@ -26,7 +25,7 @@ export default function Header({ isOpen, setIsOpen, logoSize }: any) {
           </ul>
           <div className="navbar-center">
             <Link href="/">
-              <Image src={logo} alt="Mtruck logo" width={logoSize} />
+              <Image src="/logo-mtruck.svg" alt="Mtruck logo" width={logoSize} height={50} />
             </Link>
           </div>
           <ul className="navbar-right">
