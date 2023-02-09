@@ -1,8 +1,11 @@
 .card-container {
   .card-container-wrapper {
-    display: grid;
-    @include tablet {
-      grid-template-columns: repeat(2, 1fr);
-    }
+    // display: grid;
+    // @include tablet {
+    //   grid-template-columns: repeat(2, 1fr);
+    // }
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
   }
 }

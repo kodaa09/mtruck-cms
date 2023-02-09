@@ -1,7 +1,10 @@
 .card {
   overflow: hidden;
+  max-width: 50%;
   @include mobile {
     margin-top: rem(-8);
+    width: 100%;
+    max-width: 100%;
   }
   .card-wrapper {
     position: relative;
@@ -42,6 +45,12 @@
       object-fit: cover;
       object-position: center;
       width: 100%;
+      height: auto;
     }
+  }
+  &:last-child {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
   }
 }
